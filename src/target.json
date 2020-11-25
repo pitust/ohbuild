@@ -12,6 +12,7 @@
     "disable-redzone": true,
     "features": "-mmx,+sse",
     "panic-strategy": "abort",
+    "code-model": "large",
     "pre-link-args": {
         "ld.lld": []
     }
