@@ -9,7 +9,7 @@ fn main() {
 
     let cached_ld_script = "/tmp/ohbuild.cache/link.ld";
     let cached_targetspec = "/tmp/ohbuild.cache/target.json";
-    let cargo_cache_dir = "/tmp/ohbuild.cache/cargo-cache/".to_string() + name;
+    let cargo_cache_dir = format!("{}/target/{}", std::env::current_dir().unwrap().as_os_str().to_string_lossy(), name);
     let out = format!("rootfs/bin/{}", name);
     std::fs::create_dir_all(cargo_cache_dir.clone()).unwrap();
     std::fs::create_dir_all(format!("/tmp/ohbuild.cache/ns.dir/src")).unwrap();
