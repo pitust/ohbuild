@@ -52,7 +52,7 @@ fn main() {
         ])
         .env("CARGO_TARGET_DIR", cargo_cache_dir.clone())
         .env("CARGO_BUILD_TARGET", cached_targetspec)
-        .env("RUSTFLAGS",format!("-Clink-args=-T{}", cached_ld_script))
+        .env("RUSTFLAGS",format!("-Clink-args=-T{} -Ccode-model=large", cached_ld_script))
         .spawn()
         .unwrap()
         .wait()

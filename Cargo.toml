@@ -10,3 +10,7 @@ edition = "2018"
 clap = "3.0.0-beta.2"
 serde = "1.0.117"
 toml = "0.5.7"
+
+[[bin]]
+name = "mbcc"
+path = "src/mbcc.rs"
