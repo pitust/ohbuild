@@ -39,5 +39,5 @@ fn main() {
         .unwrap()
         .wait()
         .unwrap();
-    std::fs::copy(format!("{}/target/debug/{}", cargo_cache_dir, name), out).unwrap();
+    std::fs::copy(format!("{}/target/debug/mbcc-pkg", cargo_cache_dir), out).unwrap();
 }
