@@ -27,9 +27,9 @@ fn main() {
 
     std::process::Command::new("cargo")
         .args(&[
-            "build",
+			"build",
             "-Z",
-            "build-std=core,alloc",
+			"build-std=core,alloc",
         ])
         .env("CARGO_TARGET_DIR", cargo_cache_dir.clone())
         .env("CARGO_BUILD_TARGET", cached_targetspec)
